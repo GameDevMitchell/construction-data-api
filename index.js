@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
+const PORT = process.env.PORT || 3000; // Define PORT here
 
 // Sample data for building materials and prices
 const materials = [
