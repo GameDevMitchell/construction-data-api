@@ -9,7 +9,7 @@ const materials = [
   { name: 'bricks', price: 10 },
   { name: 'concrete Blocks', price: 15 },
   { name: "steel", price: 100},
-  { name : "wood", price: 30},
+  { name: "wood", price: 30},
   { name: "doors", price: 150},
   { name: "windows", price: 200}, 
   { name: "nails", price: 5},
@@ -314,7 +314,7 @@ app.get('/materials/:type', (req, res) => {
     if (building) {
         res.json(building.tools);
     } else {
-        res.status(404).json({ message: 'Building not found' });
+        res.status(404).json({ message: 'Material not found' });
     }
 });
 
@@ -332,7 +332,7 @@ app.get('/buildings/:buildingType', (req, res) => {
     if (building) {
       // Calculate total cost estimate
       const totalCost = building.estimate;
-      
+      console.log(building)
       // Extract tool prices
       const toolPrices = building.tools.reduce((acc, tool) => {
         acc[tool.name] = tool.price;
