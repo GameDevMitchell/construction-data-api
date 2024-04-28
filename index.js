@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const PORT = process.env.PORT || 3000; // Define PORT here
+const PORT = process.env.PORT || 3000; // The PORT is here
 
 // Sample data for building materials and prices
 const materials = [
@@ -60,7 +60,6 @@ const buildings = [
       // Rest of the tools...
     ],
   },
-  // Rest of the buildings...
   {
     type: "bungalow",
     estimate: 100000,
@@ -330,10 +329,10 @@ app.get('/buildings/:buildingType', (req, res) => {
     const building = buildings.find(bldg => bldg.type.toLowerCase() === buildingType);
     
     if (building) {
-      // Calculate total cost estimate
+      // total cost estimate
       const totalCost = building.estimate;
       console.log(building)
-      // Extract tool prices
+      // tool prices
       const toolPrices = building.tools.reduce((acc, tool) => {
         acc[tool.name] = tool.price;
         return acc;
