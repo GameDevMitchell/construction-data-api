@@ -40,7 +40,6 @@ const materials = [
   { name: "fiber cement board", price: 45},
   { name: "mortar mix", price: 30},
   { name: "roofing Sheets", price: 80},
-  // Rest of the materials...
 ];
 
 // Sample data for building types, construction estimates, and required tools with their estimated prices
